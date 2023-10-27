@@ -1,0 +1,8 @@
+fastapi==0.103.2
+uvicorn==0.22.0
+pandas
+tabula
+tabula-py
+requests==2.28.2
+pdfminer.six==20221105
+beautifulsoup4==4.9.3
