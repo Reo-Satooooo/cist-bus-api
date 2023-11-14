@@ -4,15 +4,43 @@
 公立千歳科学技術大学のシャトルバスの時刻表を取得するAPIです。  
 [公立千歳科学技術大学HP](https://www.chitose.ac.jp/access/)のシャトルバス時刻表をスクレイピングしています。
 
-## 使い方
-プロジェクトをクローンし、python3.7以上で実行してください。
+## 推奨環境
+- python 3.7以上
+
+## 環境構築
+プロジェクトをクローンし、対象ディレクトリに移動します。
 ```
-cd bus-api
-python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements.txt
+git clone https://github.com/Reo-Satooooo/cist-bus-api.git
+cd cist-bus-api
+```
+
+pythonのライブラリでjava環境が必要なので、javaをインストールします。
+以下はUbuntuの場合です。
+[Ubuntu 20.04にAptを使用してJavaをインストールする方法](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04-ja)
+```
+sudo apt install default-jre
+java -version
+```
+
+pythonの仮想環境を作成します。
+```
+python3 -m venv cist-bus-api-venv
+. ciist-bus-api-venv/bin/activate
+```
+
+仮想環境内でプロジェクトを実行します。
+```
+pip install --upgrade pip
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-仮想環境でPythonパッケージを簡易する場合は以下の記事を参考にしてください。
+
+仮想環境から抜ける場合は以下のコマンドを実行します。
+```
+deactivate
+```
+
+以下は参考記事です。
 [Pythonの開発環境の3つの観点をおさえよう](https://zenn.dev/os1ma/articles/935f6e653f1052)
 
 ### バス停の一覧を取得する
