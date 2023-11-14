@@ -25,7 +25,7 @@ java -version
 pythonの仮想環境を作成します。
 ```
 python3 -m venv cist-bus-api-venv
-. ciist-bus-api-venv/bin/activate
+. cist-bus-api-venv/bin/activate
 ```
 
 仮想環境内でプロジェクトを実行します。
