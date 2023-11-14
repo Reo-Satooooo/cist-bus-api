@@ -8,7 +8,7 @@ class PdfManager:
   
   def __init__(self):
     self.load_url = "http://www.chitose.ac.jp/info/access"
-    self.html = requests.get(self.load_url, verify=False)
+    self.html = requests.get(self.load_url, verify=True)
     self.soup = BeautifulSoup(self.html.content, "html.parser")
     self.tag_list = self.soup.select('a[href*="/uploads/files/"]')
     self.file_name = self.tag_list[0].get('href')
