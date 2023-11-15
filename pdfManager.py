@@ -49,3 +49,5 @@ class PdfManager:
         shutil.rmtree(self.file_dir)
         os.makedirs(self.file_dir)
         self.download_file()
+        
+    
