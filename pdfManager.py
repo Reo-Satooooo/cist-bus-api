@@ -48,21 +48,4 @@ class PdfManager:
     else:
         print("ファイルが一つも存在しません")
         self.download_file()
-    # if  self.file_exists():
-    #     print("ファイルが既に存在します")
-    #     # file_dir直下にあるファイル名を取得
-    #     current_file_name = os.listdir(self.file_dir)[0]
-    #     expected_file_name = self.get_file_name()
-    #     if current_file_name != expected_file_name:
-    #         print("ファイル名が異なるため、ファイルを更新します")
-    #         shutil.rmtree(self.file_dir)
-    #         os.makedirs(self.file_dir)
-    #         self.file_path = os.path.join(self.file_dir, expected_file_name)
-    #         self.download_file()    
-    # else:
-    #     print("ファイルが一つも存在しません")
-    #     shutil.rmtree(self.file_dir)
-    #     os.makedirs(self.file_dir)
-    #     self.download_file()
-        
-    
+            
