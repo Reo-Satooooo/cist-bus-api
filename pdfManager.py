@@ -1,8 +1,11 @@
 import requests
 import os
 import shutil
+import urllib3
 from datetime import datetime, timedelta, timezone
 from bs4 import BeautifulSoup
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class PdfManager:
   
